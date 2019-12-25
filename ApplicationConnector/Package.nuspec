@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>RabanSoft.ApplicationConnector</id>
+    <version>1.0.0</version>
+    <authors>Daniel Raban</authors>
+    <license type="expression">MIT</license>
+    <projectUrl>https://github.com/DrabanL/ApplicationConnector</projectUrl>
+    <description>Provides simple I/O communication interface between applications</description>
+    <copyright>RabanSoft. 2019</copyright>
+    <tags>application connector socket pipeline c# .net service console trace debug</tags>
+    <dependencies>
+      <dependency id="Microsoft.Samples.Debugging.MdbgEngine" version="1.4.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="bin\Release\RabanSoft.ApplicationConnector.dll" target="lib\net472" />
+    <file src="bin\Release\RabanSoft.ApplicationConnector.pdb" target="lib\net472" />
+  </files>
+</package>
