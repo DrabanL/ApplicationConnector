@@ -10,6 +10,8 @@ A use case for this library may be, for example, if you want to connect a Window
 
 Another use case may be to live debug a Windows Service, when needed.
 
+.NET 4.7.2 is a minimum requirement to use this library
+
 ## Server-Side (Send output and receive client commands)
 ```
 using RabanSoft.ApplicationConnector.ConnectorHandlers;
@@ -104,3 +106,14 @@ ProcessIOBinder.Attach("DestinationProcessName");
 
 ProcessIOBinder.DetachAll();
 ```
+
+# Nuget package
+Install-Package RabanSoft.ApplicationConnector
+
+or
+
+dotnet add package RabanSoft.ApplicationConnector
+
+or
+
+https://www.nuget.org/packages/RabanSoft.ApplicationConnector
