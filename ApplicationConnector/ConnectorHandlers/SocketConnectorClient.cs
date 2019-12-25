@@ -13,10 +13,10 @@ namespace RabanSoft.ApplicationConnector.ConnectorHandlers
 
         internal override IEnumerable<Stream> GetConnectedStreams() => _streams;
 
-        public SocketConnectorClient(IPAddress address = null, int port = 42535) : base()
+        public SocketConnectorClient(int port = 42535, IPAddress address = null) : base()
         {
-            _address = address ?? IPAddress.Loopback;
             _port = port;
+            _address = address ?? IPAddress.Loopback;
         }
 
         public override async void Start() {

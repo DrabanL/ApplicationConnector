@@ -7,10 +7,11 @@
 #define DES_ENC
 //#undef DES_ENC
 #define ATTACH_IO
-#undef ATTACH_IO
+//#undef ATTACH_IO
 
 using RabanSoft.ApplicationConnector.ConnectorHandlers;
 using RabanSoft.ApplicationConnector.DataTransformers;
+using RabanSoft.ApplicationConnector.IOBinders;
 using System;
 using System.IO;
 using System.Text;
