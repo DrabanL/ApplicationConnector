@@ -10,7 +10,7 @@ A use case for this library may be, for example, if you want to connect a Window
 
 Another use case may be to live debug a Windows Service, when needed.
 
-## Server-Side Example (Send output and receive client commands)
+## Server-Side (Send output and receive client commands)
 ```
 using RabanSoft.ApplicationConnector.ConnectorHandlers;
 
@@ -30,7 +30,7 @@ connectorServer.Send(..);
 connectorServer.Stop();
 ```
 
-## Client-Side Example (Send commands and receive server output)
+## Client-Side (Send commands and receive server output)
 ```
 using RabanSoft.ApplicationConnector.ConnectorHandlers;
 
@@ -50,7 +50,7 @@ connectorClient.Send(..);
 connectorClient.Stop();
 ```
 
-## Data Encryption Example
+## Data Encryption
 * It is recommanded to use DataTransformers to encrypt the outgoing and incoming data so it will not be visible to MITM attacks, as well as to let only a verified consumer process to communicate with the producer process
 ```
 using RabanSoft.ApplicationConnector.DataTransformers;
@@ -72,7 +72,7 @@ class CustomizedConnectorServer /** CustomizedConnectorClient */ : PipelineConne
 var connectorServerBaseInstance = new CustomizedConnectorServer();
 ```
 
-## Console Output Binding Example (Producer process)
+## Console Output Binding (Producer process)
 * This binder gets Console.Write calls and broadcasts them using the connector server instance
 ```
 using RabanSoft.ApplicationConnector.IOBinders;
@@ -87,7 +87,7 @@ ConsoleIOBinder.Bind(connectorServerBaseInstance);
 ConsoleIOBinder.UnBind();
 ```
 
-## Process Output Binding Example (Consumer process)
+## Process Output Binding (Consumer process)
 * This binder only gets Debug.Write or Trace.Write output from the producer
 * The consumer actually attempts to attach a "debugger" to the producer process, which means the consumer process must have required previliges to attach to the other process, the two proccesses must be built in the same architecture (x86 or x64), and the producer process can be attached to only once.
 * <code>ProcessIOBinder.DetachAll()</code> must be called by the consumer process before it is terminated, otherwise the producer process will terminate together with the consumer.
